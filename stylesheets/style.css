@@ -1,5 +1,19 @@
+/* FONTS */
+@font-face {
+    font-family: ocra;
+    src: url(../fonts/ocraregular.ttf);
+}
+
+/* KEYFRAMES */
+
+/* GENERAL */
+
 *{
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 html,body{
@@ -24,6 +38,8 @@ html,body{
     background: #4d4d4d;
     color: #e2e2e2;
     font-size: 18px;
+    z-index: 2;
+    position: fixed;
 }
 
 #wrapper nav .nav-urls{
@@ -54,6 +70,22 @@ html,body{
     color:aqua;
 }
 
+#wrapper .progress-container {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0,0,0,0);
+  z-index: 1;
+}
+
+#wrapper .progress-container .progress-bar{
+    height: 100%;
+    width: 10%;
+    background: aqua;
+}
+
 /* FOOTER */
 #wrapper footer{
     width: 100%;
@@ -63,6 +95,8 @@ html,body{
     background: #4d4d4d;
     color: #e2e2e2;
     font-size: 18px;
+        z-index: 2;
+    position: relative;
 }
 
 #wrapper footer .container{
@@ -103,3 +137,45 @@ html,body{
     padding: 0px 50px;
     color: #e2e2e2;
 }
+
+/* Home | header */
+
+#wrapper header .bg{
+    background: url("../assets/images/IMG_1289.webp");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    filter: blur(5px) grayscale(0.5) hue-rotate(310deg) opacity(0.4);
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    animation: opacity-fade-in 1s ease-in;
+}
+
+#wrapper header .title{
+    font-family: ocra;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: #e2e2e2;
+    font-weight: bold;
+    font-size: 70px;
+    animation: transform-y-fade-in 1s ease-in-out;
+}
+
+#wrapper header .title span{
+    padding-top: 20px;
+    font-size: 25px;
+    text-align: right;
+    width: 550px;
+}
+
+/* */
