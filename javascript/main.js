@@ -10,3 +10,24 @@ function progressBarScroll() {
 window.onscroll = function () {
   progressBarScroll();
 };
+
+function activeLink(){
+  try{
+    document.getElementsByClassName("active")[0].classList.remove("active");
+  }
+  catch(e){
+    e;
+  }
+  let current = window.location.toString();
+  let elements = document.getElementsByClassName("nav-urls")[0].children;
+  let index = 0;
+  let length = elements.length;
+
+  for(index; index < length; index++){
+    if(elements[index].children[0].href === current){
+      elements[index].classList.add("active")
+    }
+  }
+}
+
+activeLink();
