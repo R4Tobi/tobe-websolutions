@@ -17,10 +17,10 @@
 
 <body>
     <div id="wrapper">
-        <!--footer has to be in every html file the same-->
-            <nav>
+            <!--footer has to be in every html file the same-->
+            <nav id="nav" class="">
                 <div class="nav-title">To Be. Web Solutions</div>
-                <div class="nav-urls">
+                <div class="nav-urls" id="nav-urls">
                     <span class="item">
                         <a href="./index.html">Home</a>
                     </span>
@@ -37,11 +37,17 @@
                         <a href="./contact.html">Kontakt</a>
                     </span>
                 </div>
+                <input type="checkbox" id="toggler" onclick="toggleNav()" title="toggle nav" />
+                <label for="toggler" class="toggle">
+                    <div class="bar bar--top"></div>
+                    <div class="bar bar--middle"></div>
+                    <div class="bar bar--bottom"></div>
+                </label>
             </nav>
             <div class="progress-container">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-        <!---->
+            <!---->
         <header>
             <h1></h1>
             <h2></h2>

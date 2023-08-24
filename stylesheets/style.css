@@ -86,6 +86,10 @@ html,body{
     align-items: baseline;
 }
 
+#wrapper nav .nav-toggler{
+    display: none;
+}
+
 #wrapper .progress-container {
   position: fixed;
   top: 80px;
@@ -101,6 +105,126 @@ html,body{
     width: 0%;
     background: aqua;
 }
+
+#wrapper nav #toggler, #wrapper nav .toggle{
+    display: none;
+}
+
+/* RESPONSIVE DESIGN - NAV */
+@media screen and (max-width: 1080px){
+    #wrapper nav{
+        display:flex;
+        flex-direction: column;
+        min-height: 80px;
+        height: fit-content;
+        transition: height ease-in-out .5s;
+    }
+
+    #wrapper nav .nav-urls{
+        transform: translateY(-1000px);
+        transition: all ease-in-out .5s;
+    }
+
+    #wrapper nav .nav-title{
+        font-size: 22px;
+        top: calc(40px - 10px);
+        left: 20px;
+        position: absolute;
+    }
+
+    #wrapper nav.mobile-open .nav-urls{
+        transform: translateY(0px);
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    #wrapper nav.mobile-open .nav-urls .item{
+        width: 90vw;
+        display: flex; 
+        flex-direction: row;
+    }
+
+    #wrapper nav.mobile-open .nav-urls .item::before{
+        content: "";
+        padding: 0 10px;
+    }
+
+    #wrapper nav.mobile-open .nav-urls .item.active{
+        padding-left: 20px;
+    }
+
+    #wrapper nav.mobile-open .nav-urls .item a{
+        display: inline-block;
+        padding: 15px 0;
+        border-bottom: 1px solid #3d3d3d;
+        width:100%;
+    }
+
+    /* TOGGLER */
+
+    #wrapper nav .toggle {
+        position: absolute;
+        right: 20px;
+        top: calc(80px / 2 - 25px);
+        width: 50px;
+        cursor: pointer;
+        margin: auto;
+        display: block;
+        height: calc(6px * 3 + 16px * 2);
+    }
+
+    #wrapper nav .toggle .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 6px;
+        border-radius: calc(6px / 2);
+        background: #e2e2e2;
+        color: inherit;
+        opacity: 1;
+        transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+    }
+
+    /***** Spin Animation *****/
+
+    #wrapper nav .toggle .bar.bar--top {
+        bottom: calc(50% + 12px + 6px/ 2);
+        transition-property: bottom,transform;
+        transition-delay: calc(0s + 0.35s),0s;
+    }
+
+    #wrapper nav .toggle .bar.bar--middle {
+        top: calc(50% - 6px/ 2);
+        transition-property: opacity;
+        transition-delay: calc(0s + 0.35s);
+    }
+
+    #wrapper nav .toggle .bar.bar--bottom {
+        top: calc(50% + 12px + 6px/ 2);
+        transition-property: top,transform;
+        transition-delay: calc(0s + 0.35s),0s;
+    }
+
+    #wrapper nav #toggler:checked + .toggle .bar.bar--top {
+        bottom: calc(50% - 4px/ 2);
+        transform: rotate(135deg);
+        transition-delay: 0s,calc(0s + 0.35s);
+    }
+
+    #wrapper nav #toggler:checked + .toggle .bar.bar--middle {
+        opacity: 0;
+        transition-duration: 0s;
+        transition-delay: calc(0s + 0.35s);
+    }
+
+    #wrapper nav #toggler:checked + .toggle .bar.bar--bottom {
+        top: calc(50% - 4px/ 2);
+        transform: rotate(225deg);
+        transition-delay: 0s,calc(0s + 0.35s);
+    }
+}
+
 
 /* FOOTER */
 #wrapper footer{
@@ -155,6 +279,19 @@ html,body{
     border: none;
     height: 3px;
     background: rgba(200,200,200,0.5);
+}
+
+/* RESPONSIVE DESIGN - FOOTER */
+@media screen and (max-width:800px){
+    #wrapper footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #wrapper footer .container{
+        margin: 0 20px; 
+        text-align: center;
+    }
 }
 
 /* Datenschutz und Impressum */
@@ -268,5 +405,35 @@ html,body{
 
 #wrapper section .img-right .text h2{
     font-size: 18px;
+}
 
+/* RESPONSIVE DESIGN */
+@media screen and (max-width:700px) {
+    #wrapper header[target=index]{
+        height: 80vh;
+    }
+
+    #wrapper header[target=index] .title{
+        width: 100vw;
+        font-size: 32px;
+    }
+
+    #wrapper header[target=index] .title span{
+        font-size: 20px;
+        width: 90vw;
+    }
+
+    #wrapper section .img-left, #wrapper section .img-right{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #wrapper section .img-left .img, #wrapper section .img-right .img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #wrapper section .img-left .text, #wrapper section .img-right .text{
+        width: 100%;
+    }
 }

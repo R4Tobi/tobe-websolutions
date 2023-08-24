@@ -19,6 +19,9 @@ function activeLink(){
     e;
   }
   let current = window.location.toString();
+  if(window.location.pathname === "/" || window.location.pathname === ""){
+    current = window.location.toString() + "index.html"
+  }
   let elements = document.getElementsByClassName("nav-urls")[0].children;
   let index = 0;
   let length = elements.length;
@@ -31,3 +34,12 @@ function activeLink(){
 }
 
 activeLink();
+
+function toggleNav(){
+  let nav = document.getElementById("nav");
+  nav.classList.toggle("mobile-open")
+}
+
+function init(){
+  document.getElementById("nav").classList.remove("mobile-open");
+}
