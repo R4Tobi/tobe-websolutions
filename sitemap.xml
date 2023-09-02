@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://www.tobe-websolutions.de/</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>http://www.tobe-websolutions.de/index.html</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>http://www.tobe-websolutions.de/projects.html</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+        <loc>http://www.tobe-websolutions.de/skills.html</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+        <loc>http://www.tobe-websolutions.de/socials.html</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+        <loc>http://www.tobe-websolutions.de/contact.html</loc>
+        <lastmod>2023-09-02</lastmod>
+        <changefreq>monthly</changefreq>
+    </url>
+
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /php
+Disallow: /fonts
+
+Sitemap: https://tobe-websolutions.de/sitemap.xml
