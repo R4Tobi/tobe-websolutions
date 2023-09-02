@@ -43,3 +43,17 @@ function toggleNav(){
 function init(){
   document.getElementById("nav").classList.remove("mobile-open");
 }
+
+const cards = document.querySelectorAll(".card");
+const cardWrapper = document.querySelector(".cards");
+
+cardWrapper.addEventListener("mousemove", function ($event) {
+  cards.forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    const x = $event.clientX - rect.left;
+    const y = $event.clientY - rect.top;
+
+    card.style.setProperty("--xPos", `${x}px`);
+    card.style.setProperty("--yPos", `${y}px`);
+  });
+});
