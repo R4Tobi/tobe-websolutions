@@ -11,10 +11,19 @@
     AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
 RewriteEngine On
 
 RewriteCond %{SERVER_PORT} !=443
-RewriteRule ^(.*)$ https://www\.domain\.de/$1 [R=301,L]
+RewriteRule ^(.*)$ https://www\.tobe-websolutions\.de/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^domain\.de$ [NC]
-RewriteRule ^(.*)$ https://www.domain.de/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^tobe-websolutions\.de$ [NC]
+RewriteRule ^(.*)$ https://www.tobe-websolutions.de/$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /index.html [L,R=301]
