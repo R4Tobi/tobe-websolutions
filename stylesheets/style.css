@@ -2,6 +2,7 @@
 @font-face {
     font-family: ocra;
     src: url(../fonts/ocraregular.ttf);
+    font-display: swap;
 }
 
 /* KEYFRAMES */
@@ -862,7 +863,7 @@ html,body{
 
 #wrapper section .img-left .img{
     width: 50%;
-    background: url("../assets/images/background2.jpg");
+    background: url("../assets/images/IMG_0002.webp");
     background-position: center;
     background-size: cover;
 }
@@ -895,7 +896,7 @@ html,body{
 
 #wrapper section .img-right .img{
     width: 50%;
-    background: url("../assets/images/rpi.png");
+    background: url("../assets/images/IMG_0001.webp");
     background-position: center;
     background-size:contain;
     background-repeat: no-repeat;
@@ -924,13 +925,14 @@ html,body{
     border-radius: 24px;
     padding: 8px;
     border: 1px solid rgb(66, 66, 66);
-	 display: flex;
-	 flex-wrap: wrap;
-	 flex-direction: row;
-     justify-content: center;
-	 gap: 0.5rem;
-	 padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 8px;
     max-width: 1410px;
+    margin: auto;
 }
 
  #wrapper section .cards:hover .card {
@@ -993,9 +995,10 @@ html,body{
 #wrapper section .cards.skills .card .card-header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 0 20px;
 }
 
 #wrapper section .cards.skills .card .card-header img{
