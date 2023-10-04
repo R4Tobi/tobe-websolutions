@@ -842,6 +842,16 @@ html,body{
     text-align: center;
 }
 
+#wrapper header h2{
+  color: #585858;
+  font-size: 16px;
+}
+
+#wrapper header h2::after, #wrapper header h2::before{
+  color: #585858;
+  content: " - "
+}
+
 /* section */
 #wrapper section{
     width: 100%;
@@ -849,6 +859,11 @@ html,body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#wrapper section p{
+  width: 80%;
+  max-width: 720px; 
 }
 
 /* img left */
