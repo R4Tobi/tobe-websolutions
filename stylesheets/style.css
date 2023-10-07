@@ -1144,7 +1144,15 @@ html,body{
   gap: 2px;
 }
 
-#wrapper section .form-container .form-group label, #wrapper section .form-container p {
+#wrapper section .form-container p{
+  display: block;
+  margin: 0;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+#wrapper section .form-container .form-group label, #wrapper section .form-container .form p {
   display: block;
   margin-bottom: 5px;
   color: #717171;
