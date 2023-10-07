@@ -47,11 +47,11 @@ if (!empty($mail_cc)) {
 $header .= "\nContent-type: text/plain; charset=utf-8";
  
 $mail_senden = mail($empfaenger,$betreff,$msg,$header);
-mail("tobias.baake@tobe-websolutions.de", "Neue Kontaktanfrage", $msg, $header);
+$mail_admin = mail("tobias.baake@tobe-websolutions.de", "Neue Kontaktanfrage", $msg, $header);
  
  
 //Weiterleitung, hier konnte jetzt per echo auch Ausgaben stehen
-if($mail_senden){
+if($mail_senden && $mail_admin){
   header("Location: ".$url_ok); //Mail wurde gesendet
   exit();
 } else{
