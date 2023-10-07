@@ -114,3 +114,13 @@ function cardHoverEffect(){
     });
   });
 }
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+
+  if(re.test(email)){
+    document.getElementById("email").style.background = "rgba(0, 120, 60, 0.5)";
+  }else{
+    document.getElementById("email").style.background = "rgba(116, 0, 0, 0.5)";
+  }
+}
