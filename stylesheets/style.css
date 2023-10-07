@@ -947,7 +947,6 @@ html,body{
     margin: 10px 0 20px 0;
     border-radius: 24px;
     padding: 8px;
-    border: 1px solid rgb(66, 66, 66);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -1013,6 +1012,10 @@ html,body{
 #wrapper section .cards .card span{
     color: aqua;
     margin-bottom: 20px;
+}
+
+#wrapper section .cards .card p{
+  width: 100%;
 }
 
 #wrapper section .cards.skills .card .card-header{
@@ -1228,5 +1231,57 @@ html,body{
   border-color: #fff;
 }
 
+#wrapper section .row-socials{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 90%;
+  max-width: 870px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
+#wrapper section .row-socials .column-socials{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#wrapper section .row-socials .column-socials .card-box{
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  max-width: 420px;
+}
+
+#wrapper section .row-socials .column-socials .card-box .card{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  background: #212121;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  transition: all ease-in-out .2s;
+}
+
+#wrapper section .row-socials .column-socials .card-box .card .text{
+  font-size: 12px;
+}
+
+#wrapper section .row-socials .column-socials .card-box .card:hover{
+  background: #252525;
+}
+
+#wrapper section .row-socials .column-socials .card-box .card .icon{
+  width: 25px;
+  margin: 3px 10px 0 0;
+}
