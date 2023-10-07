@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
 </head>
 
-<body>
+<body onload="checkState();">
     <div id="wrapper">
             <!--footer has to be in every html file the same-->
             <nav id="nav" class="">
@@ -54,19 +54,24 @@
             <div class="form-container">
                 <form id="contactForm" class="form" action="./php/post.php" method="POST">
                     <div class="form-group"> 
-                        <label for="email">Deine Email</label>
+                        <label for="email">Deine Email*</label>
                         <input required="" name="email" id="email" type="text" oninput="validateEmail(this.value)" onkeyup="validateEmail(this.value)">
                     </div>
                     <div class="form-group">
-                        <label for="name">Dein Name</label>
+                        <label for="name">Dein Name*</label>
                         <input required="" name="name" id="name" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="textarea">Wie kann ich dir weiterhelfen?</label>
+                        <label for="phone">Deine Telefonnummer</label>
+                        <input name="phone" id="phone" type="tel">
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea">Wie kann ich dir weiterhelfen?*</label>
                         <textarea required="" cols="50" rows="10" id="textarea" name="message"></textarea>
                     </div>
                     <button type="submit" class="form-submit-btn" id="contactFormSubmit">Senden</button>
                 </form>
+                <p>mit * markierte Felder müssen ausgefüllt werden</p>
             </div>
         </section>
         <!--footer has to be in every html file the same-->
@@ -125,5 +130,6 @@
 </body>
 
 <script src="./javascript/main.js"></script>
+<script src="./javascript/contact.js"></script>
 
 </html>
