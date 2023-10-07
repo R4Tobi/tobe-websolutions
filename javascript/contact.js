@@ -26,6 +26,19 @@ document.getElementById("contactForm").addEventListener("submit", (event) => {
 });
 
 function checkState() {
-  var query = window.location.search();
-  console.log(query);
+  var query = url => [...new URLSearchParams(url.split("?")[1])].reduce(
+    (a, [k, v]) => ((a[k] = v), a),
+    {}
+  );
+  queryObject = query(String(window.location));
+
+  if(queryObject.success === "true"){
+    document.getElementById("formContainer").innerHTML = `<p>Nachricht wurde erfolgreich versendet!</p>`;
+  }else if(queryObject.success === "false"){
+    document.getElementById(
+      "formContainer"
+    ).innerHTML = `<p>Nachricht konnte nicht gesendet werden. Versuchen sie es bitte zu einem späteren Zeitpunkt erneut.</p>`;
+  }
+  let stateObj = { id: "100" }; 
+  window.history.pushState(stateObj, "Contact", "/contact.html");
 }
