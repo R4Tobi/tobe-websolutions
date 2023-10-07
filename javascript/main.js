@@ -45,6 +45,12 @@ class Render {
 function init() {
   document.getElementById("nav").classList.remove("mobile-open");
   cardHoverEffect();
+  document.getElementById("contactForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (validateEmail(document.getElementById("email").value)) {
+      document.getElementById("contactForm").submit();
+    }
+  })
 }
 
 function progressBarScroll() {
@@ -120,7 +126,9 @@ function validateEmail(email) {
 
   if(re.test(email)){
     document.getElementById("email").style.background = "rgba(0, 120, 60, 0.5)";
+    return true;
   }else{
     document.getElementById("email").style.background = "rgba(116, 0, 0, 0.5)";
+    return false;
   }
 }
