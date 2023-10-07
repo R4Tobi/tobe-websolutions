@@ -8,7 +8,7 @@
     <meta name="author" content="Tobias Baake" />
     <meta name="description" content="Wenn du Interesse hast und Konrakt aufnehmen willst, kannst du dies über diese Seie tun." />
 
-    <title>Kontakt | ToBe. WebSolutions | Website</title>
+    <title>Kontakt | ToBe. Web Solutions | Website</title>
 
     <link rel="icon" href="./assets/icons/favicon.ico" />
     <link rel="stylesheet" href="stylesheets/style.css" />
@@ -50,13 +50,30 @@
 
         <section>
             <h1>Kontakt | E-Mail Formular</h1>
-
+            <h2>To Be. Web Solutions</h2>
+            <div class="form-container">
+                <form class="form" action="./php/post.php" method="POST">
+                    <div class="form-group"> 
+                        <label for="email">Deine Email</label>
+                        <input required="" name="email" id="email" type="text" onkeyup="validateEmail(this.value)">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Dein Name</label>
+                        <input required="" name="name" id="name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="textarea">Wie kann ich dir weiterhelfen?</label>
+                        <textarea required="" cols="50" rows="10" id="textarea" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Senden</button>
+                </form>
+            </div>
         </section>
         <!--footer has to be in every html file the same-->
         <hr />
         <footer>
             <div class="container">
-                <h5>Links</h5>
+                <h4>Links</h4>
                 <span class="item">
                     <a href="./index.html">Home</a>
                 </span>
@@ -73,26 +90,26 @@
                     <a href="./contact.html">Kontakt</a>
                 </span>
             </div>
-<div class="container">
-    <h5>Socials</h5>
-    <span class="item">
-        <a href="https://www.instagram.com/tobx218">Instagram</a>
-    </span>
-    <span class="item">
-        <a href="https://www.facebook.com/profile.php?id=100091975164434">facebook</a>
-    </span>
-    <span class="item">
-        <a href="https://www.youtube.com/channel/UCrZHaOJqohyObgV-0UkQD3Q">Youtube</a>
-    </span>
-    <span class="item">
-        <a href="https://open.spotify.com/user/itobilp_dererste">Spotify</a>
-    </span>
-    <span class="item">
-        <a href="#">Discord</a>
-    </span>
-</div>
             <div class="container">
-                <h5>Impressum</h5>
+                <h4>Socials</h4>
+                <span class="item">
+                    <a href="https://www.instagram.com/tobx218">Instagram</a>
+                </span>
+                <span class="item">
+                    <a href="https://www.facebook.com/profile.php?id=100091975164434">facebook</a>
+                </span>
+                <span class="item">
+                    <a href="https://www.youtube.com/channel/UCrZHaOJqohyObgV-0UkQD3Q">Youtube</a>
+                </span>
+                <span class="item">
+                    <a href="https://open.spotify.com/user/itobilp_dererste">Spotify</a>
+                </span>
+                <span class="item">
+                    <a href="#">Discord</a>
+                </span>
+            </div>
+            <div class="container">
+                <h4>Impressum</h4>
                 <span class="item">
                     <a href="./impressum.html">Impressum</a>
                 </span>
