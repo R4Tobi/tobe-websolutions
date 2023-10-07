@@ -994,8 +994,8 @@ html,body{
 	 background-color: #091925;
 	 border-radius: inherit;
 	 transition: all 0.25s;
-	 height: calc(100% - 0.1rem);
-	 width: calc(100% - 0.1rem);
+	 height: calc(100% - 0.12rem);
+	 width: calc(100% - 0.12rem);
      padding: 15px;
 }
 
@@ -1239,14 +1239,14 @@ html,body{
   width: 90%;
   max-width: 870px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
 #wrapper section .row-socials .column-socials{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -1278,7 +1278,7 @@ html,body{
 }
 
 #wrapper section .row-socials .column-socials .card-box .card:hover{
-  background: #252525;
+  background: #262626;
 }
 
 #wrapper section .row-socials .column-socials .card-box .card .icon{
