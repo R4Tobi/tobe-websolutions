@@ -58,4 +58,6 @@ if ($_POST["message"] != "") {
     header("Location: " . $url_fehler); //Fehler beim Senden
     exit();
   }
+}else{
+  header("Location: https://www.tobe-websolutions.de/contact.html");
 }
