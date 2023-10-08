@@ -1254,7 +1254,7 @@ html,body{
   display: flex; 
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
   max-width: 420px;
 }
