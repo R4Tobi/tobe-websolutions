@@ -11,17 +11,59 @@ function validateEmail(email) {
   }
 }
 
+function validateNumber(number) {
+  var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,7}$/;
+
+  if (re.test(number.replaceAll(" ",""))) {
+    document.getElementById("phone").style.background = "rgba(0, 120, 60, 0.5)";
+    return true;
+  } else {
+    document.getElementById("phone").style.background = "rgba(116, 0, 0, 0.5)";
+    return false;
+  }
+}
+
 document.getElementById("contactForm").addEventListener("submit", (event) => {
   event.preventDefault();
-  if (validateEmail(document.getElementById("email").value)) {
-    document.getElementById("contactForm").submit();
-  } else {
+  //check E-Mail
+  if (!validateEmail(document.getElementById("email").value)) {
     document.getElementById("contactForm").style.animation =
       "horizontal-shaking  0.2s 3";
     setTimeout(() => {
       document.getElementById("contactForm").style.animation = "";
     }, 600);
-    return;
+    showSnackbar("Die E-Mail ist im falschen Format.");
+  }
+  //check the message
+  else if (document.getElementById("message").value.replaceAll(" ", "").length === 0) {
+    document.getElementById("contactForm").style.animation =
+      "horizontal-shaking  0.2s 3";
+    setTimeout(() => {
+      document.getElementById("contactForm").style.animation = "";
+    }, 600);
+    showSnackbar("Die Nachricht darf nicht leer sein.");
+  }
+  //check name
+  else if (document.getElementById("name").value.replaceAll(" ", "").length === 0) {
+    document.getElementById("contactForm").style.animation =
+      "horizontal-shaking  0.2s 3";
+    setTimeout(() => {
+      document.getElementById("contactForm").style.animation = "";
+    }, 600);
+    showSnackbar("Der Name darf nicht leer sein.");
+  }
+  //check the phone number
+  else if (!(validateNumber(document.getElementById("phone").value) || document.getElementById("phone").value.length == 0)) {
+    document.getElementById("contactForm").style.animation =
+      "horizontal-shaking  0.2s 3";
+    setTimeout(() => {
+      document.getElementById("contactForm").style.animation = "";
+    }, 600);
+    showSnackbar("Die Telefonnummer ist im falschen Format.");
+  } else {
+    document.getElementById("contactForm").submit();
+    //
+    
   }
 });
 
@@ -39,6 +81,18 @@ function checkState() {
       "formContainer"
     ).innerHTML = `<p>Nachricht konnte nicht gesendet werden. Versuchen sie es bitte zu einem späteren Zeitpunkt erneut.</p>`;
   }
-  let stateObj = { id: "100" }; 
+  let stateObj = { id: "1" }; 
   window.history.pushState(stateObj, "Contact", "/contact.html");
+}
+
+function showSnackbar(message) {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+
+  // Add the "show" class to DIV
+  x.innerHTML = message;
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
