@@ -1278,10 +1278,191 @@ html,body{
 }
 
 #wrapper section .row-socials .column-socials .card-box .card:hover{
-  background: #262626;
+  background: #1f1f1f;
 }
 
 #wrapper section .row-socials .column-socials .card-box .card .icon{
   width: 25px;
   margin: 3px 10px 0 0;
+}
+
+#wrapper section article.social-frames{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+#wrapper section article.social-frames .api-frame{
+  max-width: 480px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper section article.social-frames .api-frame h4{
+  width: 100%;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#wrapper section article.social-frames .api-frame h4 .dots{
+  height: 100%;
+  width: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#wrapper section article.social-frames .api-frame h4 .dots .dot{
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+#wrapper section article.social-frames .api-frame h4 .dots .dot.red{
+  background: red;
+}
+
+#wrapper section article.social-frames .api-frame h4 .dots .dot.yellow{
+  background: yellow;
+}
+
+#wrapper section article.social-frames .api-frame h4 .dots .dot.green{
+  background: green;
+}
+
+#wrapper section article.social-frames .api-frame h4 .title{
+  margin: 5px 10px 0 0;
+}
+
+#wrapper section article.social-frames .api-frame .content{
+  width: 100%;
+  background: #1f1f1f;
+}
+
+#wrapper section article.social-frames .api-frame .content .profile{
+  height: 120px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+}
+
+#wrapper section article.social-frames .api-frame .content .profile img{
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin: 10px 0 0 10px;
+}
+
+#wrapper section article.social-frames .api-frame .content .profile input{
+  width: 150px;
+  height: 30px;
+  background: #2a58ac;
+  color: #e2e2e2;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-right: 150px;
+}
+
+#wrapper section article.social-frames .api-frame .content .profile input:hover{
+  background: #2a58ac88
+}
+
+#wrapper section article.social-frames .api-frame .content pre{
+  background: #090909;
+  padding: 2px;
+  border-radius: 4px;
+  width: 120px;
+  text-align: center;
+}
+
+#wrapper section article.social-frames .api-frame .content .posts{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+#wrapper section article.social-frames .api-frame .content .posts img{
+  width: 140px;
+  height: 140px;
+}
+
+@media screen and (max-width: 480px) {
+  #wrapper section article.social-frames .api-frame{
+    max-width: 95%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* Snackbar */
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 999999999; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }
