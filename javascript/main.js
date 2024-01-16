@@ -25,7 +25,7 @@ class Render {
       if (jsonReleases.length > 0) {
         releaseName = `[${jsonReleases[0].name}]`;
       }
-      var elemStr = `<div class="card" onclick="window.open('${jsonData[index].html_url}')">
+      var elemStr = `<div class="card clickable" onclick="window.open('${jsonData[index].html_url}')">
                             <div class="card-content">
                                 <h3>${jsonData[index].name}</h3>
                                 <span>${releaseName}</span>

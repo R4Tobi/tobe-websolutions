@@ -57,24 +57,30 @@
                     <div class="form-group"> 
                         <label for="email">Deine Email*</label>
                         <input required="" name="email" id="email" type="text" oninput="validateEmail(this.value)" onkeyup="validateEmail(this.value)">
+                        <span id="validMail" class="invalid hidden">Die E-Mail ist nicht im richtigen Format</span>
                     </div>
                     <div class="form-group">
                         <label for="name">Dein Name*</label>
                         <input required="" name="name" id="name" type="text">
+                        <span id="validName" class="invalid hidden">Name darf nicht weniger als 2 Zeichen haben.</span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Deine Telefonnummer</label>
                         <input name="phone" id="phone" type="tel">
+                        <span id="validPhone" class="invalid hidden">Die Telefonnummer ist nicht im richtigen Format</span>
                     </div>
                     <div class="form-group">
                         <label for="message">Wie kann ich dir weiterhelfen?*</label>
                         <textarea required="" cols="50" rows="10" id="message" name="message"></textarea>
+                        <span id="validText" class="invalid hidden">Die Text ist zu kurz.</span>
                     </div>
                     <button type="submit" class="form-submit-btn" id="contactFormSubmit">Senden</button>
                     <p>mit * markierte Felder müssen ausgefüllt werden</p>
                 </form>
             </div>
-            <div id="snackbar">Some text some message..</div>
+            <div id="snackbar-container">
+                
+            </div>
         </section>
         <!--footer has to be in every html file the same-->
         <hr />

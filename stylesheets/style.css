@@ -38,6 +38,10 @@ html,body{
     min-height: 100vh;
 }
 
+
+.hidden{
+  display: none;
+}
 /* LOADER */
 .banter-loader {
   position: relative;
@@ -955,7 +959,13 @@ html,body{
     padding: 8px;
     max-width: 1410px;
     margin: auto;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
 }
+
+
 
  #wrapper section .cards:hover .card {
 	 background: radial-gradient(100rem circle at var(--xPos) var(--yPos), rgba(0, 255, 255, 0.452), transparent 15%);
@@ -971,6 +981,10 @@ html,body{
 	 align-items: center;
 	 position: relative;
 	 transition: all 0.15s;
+}
+
+#wrapper section .cards .card.clickable {
+    cursor: pointer;
 }
 
 #wrapper section  .cards .card:hover::before {
@@ -1199,12 +1213,12 @@ html,body{
 
 #wrapper section .form-container .form-group input:focus {
   outline: none;
-  border-color: aqua;
+  border-color: #2a58ac;
 }
 
 #wrapper section .form-container .form-group textarea:focus {
   outline: none;
-  border-color: aqua;
+  border-color: #2a58ac;
 }
 
 #wrapper section .form-container .form-submit-btn {
@@ -1229,6 +1243,11 @@ html,body{
 #wrapper section .form-container .form-submit-btn:hover {
   background-color: #fff;
   border-color: #fff;
+}
+
+#wrapper section .form-container .form-group .invalid{
+  color: red;
+  font-size: 12px;
 }
 
 #wrapper section .row-socials{
@@ -1326,23 +1345,6 @@ html,body{
   justify-content: space-between;
 }
 
-#wrapper section article.social-frames .api-frame h4 .dots .dot{
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-}
-
-#wrapper section article.social-frames .api-frame h4 .dots .dot.red{
-  background: red;
-}
-
-#wrapper section article.social-frames .api-frame h4 .dots .dot.yellow{
-  background: yellow;
-}
-
-#wrapper section article.social-frames .api-frame h4 .dots .dot.green{
-  background: green;
-}
 
 #wrapper section article.social-frames .api-frame h4 .title{
   margin: 5px 10px 0 0;
@@ -1422,7 +1424,7 @@ html,body{
 /* Snackbar */
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
+.snackbar {
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
@@ -1438,7 +1440,7 @@ html,body{
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
+.snackbar.show {
   visibility: visible; /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
   However, delay the fade out process for 2.5 seconds */
